@@ -1,31 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-:root{
-  --grey: #D9D9D9;
-  --blue-dark: #2C3E50;
-  --red:#E74C3C;
-  --sky-blue: #3498DB;
-  --sky-blue-dark: #0878BE;
-  --bg-img:url('./assets/background.svg');
+:root {
+  --grey: #d9d9d9;
+  --blue-dark: #2c3e50;
+  --red: #e74c3c;
+  --sky-blue: #3498db;
+  --sky-blue-dark: #0878be;
+  --bg-img: url("./assets/background.svg");
+  --bg-img-section2: url("./assets/gradientPolaris.png");
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   /*border: 1px solid red;*/
 }
 
-html{
+html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
-  
 }
 
-section{
+section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,8 +34,8 @@ section{
   width: 100%;
 }
 
-button{
-  background-color:var(--blue-dark);
+button {
+  background-color: var(--blue-dark);
   border: 0 solid black;
   outline: none;
   width: 180px;
@@ -47,30 +47,29 @@ button{
   border-radius: 5px;
 }
 
-button:hover{
+button:hover {
   background-color: var(--sky-blue);
   transition: all 0.4s linear;
 }
 
-.section-title{
+.section-title {
   font-weight: 700;
   font-size: 42px;
 }
 
-.seccion-p{
+.seccion-p {
   font-weight: 300;
   font-size: 18px;
 }
 
-.seccion-p-small{
+.seccion-p-small {
   font-weight: 300;
   font-size: 16px;
 }
 
-
 /*-----NAVBAR-----*/
 
-.header{
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,7 +80,7 @@ button:hover{
   padding: 0px 80px 0px 50px;
 }
 
-.nav-logo{
+.nav-logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,50 +88,50 @@ button:hover{
   cursor: pointer;
 }
 
-.nav-logo p{
+.nav-logo p {
   font-size: 28px;
   color: var(--sky-blue-dark);
   font-weight: 600;
 }
 
-.nav-logo img{
+.nav-logo img {
   width: 50px;
 }
 
-.nav-menu{
+.nav-menu {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.nav-menu img{
+.nav-menu img {
   display: none;
   width: 40px;
 }
 
 .navbar,
-.items{
+.items {
   display: flex;
   justify-content: center;
   align-items: center;
   list-style-type: none;
 }
 
-.items{
+.items {
   gap: 50px;
 }
 
-.navbar a{
+.navbar a {
   color: var(--sky-blue);
   font-size: 1.4rem;
 }
 
-.navbar a:hover{  
+.navbar a:hover {
   color: var(--blue-dark);
   text-decoration: underline;
 }
 
-.items li:last-child > a{
+.items li:last-child > a {
   border: 1px solid var(--blue-dark);
   padding: 10px 20px;
   font-size: 18px;
@@ -141,17 +140,16 @@ button:hover{
   text-decoration: none;
 }
 
-.items li:last-child > a:hover{
+.items li:last-child > a:hover {
   transition: all 0.4s linear;
   color: white;
-  background-color: var(--blue-dark);  
+  background-color: var(--blue-dark);
   text-decoration: none;
 }
 
-
 /*-----SECCION HERO-----*/
 
-.hero{
+.hero {
   position: relative;
   background-image: var(--bg-img);
   background-size: cover;
@@ -175,7 +173,7 @@ button:hover{
   z-index: 1;
 }
 
-.hero-titulo{
+.hero-titulo {
   position: relative;
   z-index: 2;
   display: flex;
@@ -184,16 +182,16 @@ button:hover{
   gap: 5px;
 }
 
-.hero-titulo:first-child > img{
+.hero-titulo:first-child > img {
   width: 100px;
 }
 
-.hero-titulo h1{
+.hero-titulo h1 {
   font-size: 42px;
-  color: white
+  color: white;
 }
 
-.hero-info{
+.hero-info {
   position: relative;
   z-index: 2;
   color: white;
@@ -205,19 +203,111 @@ button:hover{
   max-width: 750px;
 }
 
-.hero-info p{
+.hero-info p {
   text-align: center;
   font-size: 20px;
   font-weight: 400;
 }
 
-.hero-info button{
+.hero-info button {
   font-size: 16px;
   font-weight: 400;
 }
 
-.hero img{
+.hero img {
   position: relative;
   z-index: 2;
   width: 300px;
 }
+
+/*-----SECCION BENEFICIOS-----*/
+
+.background {
+  background-image: var(--bg-img-section2);
+  background-size: cover;
+  background-position: center;
+}
+
+.section-beneficios {
+  display: flex;
+}
+
+.contenedor-beneficios {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 15px;
+  padding: 40px 0;
+  max-width: 1300px;
+}
+
+.cards-beneficios {
+  width: 45%;
+  margin: 10px;
+  padding: 0 45px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.card-icon img {
+  width: 96px;
+}
+
+
+
+.card h2 {
+  text-align: center;
+  font-size: 22px;
+  color: white;
+  font-weight: 700;
+}
+
+.card-texto {
+  color: white;
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.card-texto p{
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/*
+.contenedor-beneficios{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 150px 0;
+  gap: 100px;
+  width: 70%;
+}
+
+.cards-beneficios{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  width: 100%;  
+}
+
+.cards-beneficios .card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+}*/
