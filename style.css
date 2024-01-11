@@ -79,7 +79,7 @@ button:hover {
   width: 100%;
   height: 100px;
   position: fixed;
-  padding: 0px 80px 0px 50px;  
+  padding: 0px 80px 0px 50px;
   background-color: white;
   z-index: 2;
 }
@@ -100,6 +100,11 @@ button:hover {
 
 .nav-logo img {
   width: 50px;
+  transition: transform 1s ease;
+}
+
+.nav-logo img:hover {
+  transform: rotate(360deg);
 }
 
 .nav-menu {
@@ -262,12 +267,14 @@ button:hover {
   gap: 20px;
 }
 
-
 .card-icon img {
   width: 96px;
+  transition: background-color 1s ease 0s;
 }
 
-
+.card-icon img:hover {
+  animation: moveIn 1s ease;
+}
 
 .card h2 {
   text-align: center;
@@ -284,19 +291,36 @@ button:hover {
   padding: 10px;
 }
 
-.card-texto p{
+.card-texto p {
   font-size: 18px;
   font-weight: 500;
 }
 
+@keyframes moveIn {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
 /*-----SECCION RESEÑAS-----*/
 
-.seccion-reseña{
+.seccion-reseña {
   display: flex;
 }
 
-.contenedor-reseña{
+.contenedor-reseña {
   display: flex;
   justify-content: space-around;
   text-align: center;
@@ -305,7 +329,7 @@ button:hover {
   max-width: 1300px;
 }
 
-.cards-reseña{
+.cards-reseña {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -313,7 +337,7 @@ button:hover {
   gap: 90px;
 }
 
-.card-reseña{
+.card-reseña {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -335,12 +359,11 @@ button:hover {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 119, 255, 0.10);
+  background-color: rgba(0, 119, 255, 0.1);
   z-index: 1;
 }
 
-
-.foto-perfil{
+.foto-perfil {
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -356,41 +379,41 @@ button:hover {
   animation: borderEffect 3s infinite;
 }
 
-.card-reseña:first-child .foto-perfil{
+.card-reseña:first-child .foto-perfil {
   background-image: url(./assets/card-1.jpg);
 }
 
-.card-reseña:nth-child(2) .foto-perfil{
+.card-reseña:nth-child(2) .foto-perfil {
   background-image: url(./assets/card-4.jpg);
 }
 
-.card-reseña:nth-child(3) .foto-perfil{
+.card-reseña:nth-child(3) .foto-perfil {
   background-image: url(./assets/card-3.jpg);
 }
 
-.card-reseña:nth-child(4) .foto-perfil{
+.card-reseña:nth-child(4) .foto-perfil {
   background-image: url(./assets/card-2.png);
 }
 
-.card-reseña:nth-child(5) .foto-perfil{
+.card-reseña:nth-child(5) .foto-perfil {
   background-image: url(./assets/Ellipse\ 15.png);
 }
 
-.card-reseña:nth-child(6) .foto-perfil{
+.card-reseña:nth-child(6) .foto-perfil {
   background-image: url(./assets/Ellipse\ 8.png);
 }
 
-
-.card-reseña h3{
+.card-reseña h3 {
   font-weight: 700;
   font-size: 20px;
 }
 
-.card-reseña .reseña{
+.card-reseña .reseña {
   font-weight: 600;
 }
 
-.card-reseña .info, .card-reseña .reseña{
+.card-reseña .info,
+.card-reseña .reseña {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -403,17 +426,16 @@ button:hover {
   0% {
     border-color: var(--sky-blue); /* Color inicial del borde */
   }
-  50% {    
-    border-color: var(--sky-blue-dark) /* Color final del borde */
+  50% {
+    border-color: var(--sky-blue-dark); /* Color final del borde */
   }
   100% {
-    border-color: #8366d1 /* Color intermedio del borde */
+    border-color: #8366d1; /* Color intermedio del borde */
   }
 }
 
-
 /*--------SECCION CONTACTO--------*/
-.seccion-contacto{
+.seccion-contacto {
   display: flex;
   flex-direction: column;
   background-image: url(./assets/banner.png);
@@ -421,17 +443,17 @@ button:hover {
   background-position: center;
 }
 
-.contenedor-contacto{
+.contenedor-contacto {
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   gap: 50px;
   max-width: 1300px;
   flex-wrap: wrap;
   flex-direction: column;
 }
 
-.contacto{
+.contacto {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -439,14 +461,14 @@ button:hover {
   gap: 250px;
 }
 
-form{
+form {
   display: flex;
   justify-content: center;
   align-items: start;
   flex-direction: column;
 }
 
-.form-contacto{
+.form-contacto {
   max-width: 400px;
   padding: 20px 80px;
   position: relative;
@@ -460,6 +482,9 @@ form{
   bottom: 0;
   left: 0;
   background-color: rgba(230, 242, 255, 0.644);
+  box-shadow: -1px 1px 28px 6px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -1px 1px 28px 6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 1px 28px 6px rgba(0, 0, 0, 0.75);
   border-radius: 8px;
   z-index: 1;
 }
@@ -472,8 +497,8 @@ label {
   font-weight: 500;
 }
 
-
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 8px;
   margin-bottom: 16px;
@@ -484,7 +509,7 @@ input, textarea {
   background-color: transparent;
 }
 
-.info-contacto{
+.info-contacto {
   display: flex;
   justify-content: center;
   align-items: start;
@@ -492,7 +517,7 @@ input, textarea {
   gap: 20px;
 }
 
-.info-contacto .info{
+.info-contacto .info {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -500,16 +525,42 @@ input, textarea {
   gap: 10px;
   color: white;
   background-color: var(--sky-blue);
+  box-shadow: -1px 1px 28px 6px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -1px 1px 28px 6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 1px 28px 6px rgba(0, 0, 0, 0.75);
   width: 310px;
   padding: 8px;
   border-radius: 8px;
 }
 
-.info-contacto .mapa{
+.info-contacto .mapa {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 10px;
   color: white;
+}
+
+/*------SECCION FOOTER-------*/
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  gap: 5px;
+}
+
+footer p {
+  color: white;
+  font-weight: 600;
+}
+
+footer p:first-child {
+  font-size: 16px;
+}
+
+footer p:nth-child(2) {
+  font-size: 18px;
 }
