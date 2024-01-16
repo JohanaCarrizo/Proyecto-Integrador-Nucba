@@ -53,6 +53,12 @@ button:hover {
   transition: all 0.4s linear;
 }
 
+button a{
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
 .section-title {
   font-weight: 700;
   font-size: 32px;
