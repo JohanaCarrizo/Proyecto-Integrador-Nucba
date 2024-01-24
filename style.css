@@ -152,8 +152,9 @@ button a {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   border: 1px solid var(--blue-dark);
-  padding: 10px 50px;
+  padding: 10px 40px;
   font-size: 18px;
   transition: all 0.4s linear;
   border-radius: 5px;
@@ -165,6 +166,27 @@ button a {
   color: white;
   background-color: var(--blue-dark);
   text-decoration: none;
+}
+
+@media (max-width: 1050px) {
+
+  .items li:last-child > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid var(--blue-dark);
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  .navbar a {
+    color: var(--sky-blue);
+    font-size: 1.3rem;
+  }
 }
 
 @media (max-width: 996px) {
@@ -586,6 +608,14 @@ textarea {
   z-index: 1;
 }
 
+
+@media (max-width: 996px) {
+    
+  .contacto {
+    gap: 100px;
+  }
+}
+
 /*------SECCION FOOTER-------*/
 
 footer {
@@ -608,4 +638,15 @@ footer p:first-child {
 
 footer p:nth-child(2) {
   font-size: 18px;
+}
+
+@media (max-width: 996px) {
+
+  footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
 }
